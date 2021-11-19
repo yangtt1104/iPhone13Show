@@ -59,13 +59,7 @@
 #screen_vertical img{
     position: relative;
     display: inline-block;
-    /* width: var(--picture-width);
-    height: var(--picture-height); */
-    /* 居中 */
-    margin: 50x auto;
-    /* top: calc((var(--device-height) * 0.5) * var(--progress));
-    left:1700px; */
-    
+    margin: 50x auto;  
     opacity: var(--progress);
     
     -webkit-mask-image: url(https://assets.codepen.io/2002878/iphone12-5g_on_phone_mask.png);
@@ -76,12 +70,7 @@
 #screen_horizontal img{
     position: relative;
     display: inline-block;
-    /* width: var(--picture-width);
-    height: var(--picture-height); */
-    /* 居中 */
     margin: 50x auto;
-    /* top: calc((var(--device-height) * 0.5) * var(--progress));
-    left:1700px; */
     opacity: var(--progress);
     
     -webkit-mask-image: url(./img/iphone12-5g_on_phone_mask.webp);
