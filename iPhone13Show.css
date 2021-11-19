@@ -1,0 +1,204 @@
+:root {
+    --device-width: 4618px;
+    --device-height: 1812px;
+    --number-width: 192px;
+    --number-height: 192px;
+    --picture-width: 258px;
+    --picture-height: 546px;
+    --percentage: 0%;
+}
+
+#body {
+    background-color: #0C3139;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Helvetica;
+    padding: 4rem 0;
+}
+
+#video {
+    background-color: #000;
+    margin: 0;
+    height: 200vh;
+}
+
+#iphone {
+    position: relative;
+    width: var(--device-width);
+    height: var(--device-height);
+    background-color: #0C3139;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    --progress:0;
+
+}
+
+#number img{
+    position: relative;
+    display: inline-block;
+    width: var(--number-width);
+    height: var(--number-height);
+    /* 居中 */
+    margin: 50x auto;
+    transform: scale(calc(3 - (2 * var(--progress)))); 
+}
+
+#screen_vertical,#screen_horizontal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    --progress:0;
+} 
+
+#screen_vertical img{
+    position: relative;
+    display: inline-block;
+    /* width: var(--picture-width);
+    height: var(--picture-height); */
+    /* 居中 */
+    margin: 50x auto;
+    /* top: calc((var(--device-height) * 0.5) * var(--progress));
+    left:1700px; */
+    
+    opacity: var(--progress);
+    
+    -webkit-mask-image: url(https://assets.codepen.io/2002878/iphone12-5g_on_phone_mask.png);
+     -webkit-mask-size: var(--picture-width) var(--picture-height);
+    
+}
+
+#screen_horizontal img{
+    position: relative;
+    display: inline-block;
+    /* width: var(--picture-width);
+    height: var(--picture-height); */
+    /* 居中 */
+    margin: 50x auto;
+    /* top: calc((var(--device-height) * 0.5) * var(--progress));
+    left:1700px; */
+    opacity: var(--progress);
+    
+    -webkit-mask-image: url(./img/iphone12-5g_on_phone_mask.webp);
+     -webkit-mask-size: var(--picture-height) var(--picture-width);
+}
+
+  #index{
+    background-color: #35283C;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    font-family: Helvetica;
+    padding: 4rem 0;
+    border: white 2rem solid;
+  }
+
+  #index-content{
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        --progress:0;
+  }
+
+  #index h1{
+    font-size: 100px;
+    color: white;
+  }
+
+  #index_intro{
+    background-color: #35283C;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    font-family: Helvetica;
+    padding: 4rem 0;
+    border: white 2rem solid;
+    border-bottom: 0rem;
+  }
+
+
+  #photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    font-family: Helvetica;
+    width: auto;
+    height: auto;
+    background-color: #12213A;
+    margin-top: -2rem;
+  }
+
+  #photo h1{
+    font-size: 50px;
+    color: white;
+  }
+
+  #game{
+
+    padding: 4rem 0;
+    border: white 2rem solid;
+    background-color: #0C3139;
+    margin: 0;
+    height: 500vh;
+  }
+
+  #sticky{
+    position: sticky;
+    top: 0;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #sticky h1{
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+    color: #fff;
+    letter-spacing: -0.3px;
+    
+    background-image: linear-gradient(75deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33.33%, rgba(255, 255, 255, 0) 66.67%, rgba(255, 255, 255, 0) 100%);
+    background-size: 300% 100%;
+    background-position-x: calc(100% - var(--percentage));
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+  }
+
+  #photo_slide{
+    background-color: #0C3139;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #photo_slide img{
+    position: relative;
+    opacity: var(--progress);
+  }
+
+
